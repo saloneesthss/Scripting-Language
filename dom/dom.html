@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 2px solid cadetblue;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">Pookie</div>
+    <button onclick="changeBgcolor()">Change Div</button>
+    <button onclick="createNewDiv()">Create Div</button>
+    <script>
+        function changeBgcolor() {
+            let myDiv=document.querySelector('#mydiv');
+            myDiv.style.color="white";
+            myDiv.style.backgroundColor="red";
+            myDiv.style.border="2px solid orange";
+
+            document.querySelector('body').style.backgroundColor="beige";
+        }
+        function removeDiv() {
+            let myDiv=document.querySelector('#mydiv');
+            myDiv.remove();
+        }
+
+        function createNewDiv() {
+            const newDiv=document.createElement('DIV');
+            newDiv.style.width="100px";
+            newDiv.style.height="100px";
+            newDiv.innerHTML="<h3>New div created</h3>";
+
+            document.querySelector('#mydiv').appendChild(newDiv);
+        }
+    </script>
+</body>
+</html>

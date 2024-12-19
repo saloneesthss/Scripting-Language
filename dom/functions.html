@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <button onclick="square()">Find square</button>
+    <script>
+        // function square(n){
+        //     return n*n;
+        // }
+        const square1=function(n){
+            console.log(this);
+            return n*n;
+        }
+        let square=(n)=>{
+            return n*n;
+        }
+        console.log(square(4));
+        console.log(square1(5));
+
+        //this keyword -> do not use in arrow function bcz it does not represent particular object but top function i.e. window
+        const student = {
+            name: "Ram",
+            age: 10,
+            getInfo: function() {
+                console.log(this.name, this.age);
+            }
+        }
+    </script>
+</body>
+</html>

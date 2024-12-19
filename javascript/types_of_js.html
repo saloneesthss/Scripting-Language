@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Types of JS</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 5px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Javascript</h2>
+    <button class="inline" onclick="createParagraph()">Inline</button>
+    <button class="internal">Internal</button>
+    <button class="external">External</button>
+</body>
+<script src="external.js"></script>
+<script>
+    function createParagraph() {
+        const para = document.createElement("p");
+        para.textContent = "You clicked the inline button!";
+        document.body.appendChild(para);
+    }
+
+    function createParas() {
+        const para = document.createElement("p");
+        para.textContent = "You clicked the internal button!";
+        document.body.appendChild(para);
+    }
+    const button2 = document.querySelector(".internal");
+    button2.addEventListener("click", createParas);
+</script>
+</html>

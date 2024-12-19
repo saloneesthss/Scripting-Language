@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+
+    <title>javascript class</title>
+</head>
+<body>
+    <div id="output"></div>
+    <button onclick="getStudentInfo()">find info</button>
+    <script>
+        class Student{
+            constructor(){
+                this.name ='';
+                this.age = '';
+               this.address = '';
+            }
+            getinfo () {
+                return this.name + ' '+this.age;
+            }
+        }
+
+        //const std = new Student();
+        //std.aaddress = "Bhaktapur";
+
+        //console.log(std.aaddress);
+       
+        const student = {
+            name: "ram",
+            age : 20,
+            address: "Bhaktapur",
+            getInfo:function(){
+                return this.name +" "+ this.age +" , "+ this.address;
+            }
+        };
+        student.name = "Shyam";// updating properties
+        //deleting property
+        delete student.age;
+
+        //add
+        student.email = "shyam@gmail.com";
+
+
+        student.getDetailInfo = function(){
+                return this.name +" "+ this.age +" , "+ this.address + ' '+ this.email;
+            }
+
+        function getStudentInfo(){
+            document.querySelector("#output").innerHTML = student.getInfo();
+        }
+    </script>
+    
+</body>
+</html>
