@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <div>All fields are mandatory.</div><br>
+    <div id="error_msg" style="color: red;"></div><br>
+
+    <form name="register" id="register" method="post" onsubmit="return validateForm();">
+        Name : <input type="text" id="name" name="name"> <br><br>
+        Email : <input type="text" id="email" name="email"> <br><br>
+        Address : <input type="text" id="address" name="address"> <br><br>
+        <button type="submit" style="background-color: white; padding: 5px;">Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let address = document.querySelector('#address').value;
+            let errorElement = document.querySelector('#error_msg');
+            let errorMsg = '';
+
+            if(name === '') {
+                errorMsg += 'Please enter your name. <br>';
+            }
+            if(name.length < 5) {
+                errorMsg += 'Name must have at least 5 characters. <br>';
+            }
+            if(email === '') {
+                errorMsg += 'Please enter your email address. <br>';
+            }
+            if(email.indexOf('@') === -1) {
+                errorMsg += 'Please enter a valid email address. <br>';
+            }
+            if(address === '') {
+                errorMsg += 'Please enter your address. <br>';
+            }
+            if (errorMsg !== '') {
+                errorElement.innerHTML = errorMsg;
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

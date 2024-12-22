@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    <h3>Arrays in JavaScript</h3>
+    <script>
+        let students = [
+            {
+                id: 1,
+                name: 'Salonee Shrestha',
+                status: true,
+                age: 21,
+            },
+            {
+                id: 2,
+                name: 'Seokjin Shrestha',
+                status: false,
+                age: 23,
+            },
+        ];
+        for (let i=0; i < students.length; i++) {
+            document.write(`Name: ${students[i].name}<br> Status: ${students[i].status}<br> Age: ${students[i].age}<br><br>`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loops</title>
+</head>
+<body>
+    <h2>Loops in JavaScript</h2>
+    <script>
+        const qualifications = [
+            {
+                title: 'SEE',
+                year: 2075,
+            },
+            {
+                title: '+2',
+                year: 2077,
+            },
+            {
+                title: 'BCA',
+                year: 2081,
+            },
+        ];
+        document.write(`<h3>While Loop</h3>`);
+        let i=0;
+        while (i < qualifications.length) {
+            document.write(`${qualifications[i].title} ${qualifications[i].year}<br>`);
+            i++;
+        }
+        document.write(`<h3>For Loop</h3>`);
+        for(i=0; i<qualifications.length; i++) {
+            document.write(`Title: ${qualifications[i].title}<br>`);
+        }
+        document.write(`<h3>ForEach Loop</h3>`);
+        qualifications.forEach((qualification) => {
+            document.write(`Year: ${qualification.year}<br>`);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create HTML element</title>
+    <style>
+        button {background-color: white; padding: 5px;}
+    </style>
+</head>
+<body>
+    <h2>Click the button to generate an image.</h2>
+    <button onclick="createPara();">Click Me</button><br><br>
+</body>
+<script>
+    function createPara() {
+        let img = document.createElement('img');
+        img.src = './invoke_img.jpg';
+        document.querySelector('body').appendChild(img);
+    }
+</script>
+</html>
