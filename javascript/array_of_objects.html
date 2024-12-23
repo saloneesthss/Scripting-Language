@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array of Objects</title>
+</head>
+<body>
+    <h3 style="padding-left: 40px;">List of Students</h3>
+    <ul id="student_list" style="list-style-type: none;"></ul>
+    <script>
+        let students = [
+            {id: 1, name: 'Simran Shrestha', course: 'CSIT',},
+            {id: 2, name: 'Lara Jenner', course: 'BCA'},
+            {id: 3, name: 'Mike Smith', course: 'BBA'},
+        ];
+        const ul = document.querySelector('#student_list');
+        students.forEach(student => {
+            const li = document.createElement('li');
+            li.textContent = `ID: ${student.id}, Name: ${student.name}, Course: ${student.course}`;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<body>
+    <h4>Press the buttons to hide or show the box</h4>
+    <div style="width: 100px; height:100px; background-color: red; border: 1px solid black;"></div><br>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <script>
+        $(document).ready(() => {
+            $('#btnHide').click(function() {
+                $('div').slideUp(3000);
+            });
+            $('#btnShow').click(function() {
+                $('div').slideDown(3000);
+            });
+        });
+    </script>
+</body>
+</html>
