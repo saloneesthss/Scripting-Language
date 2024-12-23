@@ -20,19 +20,19 @@
                 year: 2081,
             },
         ];
-        document.write(`<h3>While Loop</h3>`);
+        console.log(`While Loop`);
         let i=0;
         while (i < qualifications.length) {
-            document.write(`${qualifications[i].title} ${qualifications[i].year}<br>`);
+            console.log(`Title:${qualifications[i].title} Year:${qualifications[i].year}`);
             i++;
         }
-        document.write(`<h3>For Loop</h3>`);
+        console.log(`For Loop`);
         for(i=0; i<qualifications.length; i++) {
-            document.write(`Title: ${qualifications[i].title}<br>`);
+            console.log(`${qualifications[i].title}`);
         }
-        document.write(`<h3>ForEach Loop</h3>`);
+        console.log(`ForEach Loop`);
         qualifications.forEach((qualification) => {
-            document.write(`Year: ${qualification.year}<br>`);
+            console.log(`${qualification.year}`);
         })
     </script>
 </body>

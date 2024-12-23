@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Elements</title>
+</head>
+<body>
+    <h3>Log array elements in Console</h3>
+    <script>
+        let students = [
+            {
+                id: 1,
+                name: 'Salonee Shrestha',
+                age: 21,
+                skills: ["JavaScript", "HTML", "CSS", "PHP"],
+            },
+            {
+                id: 2,
+                name: 'Seokjin Shrestha',
+                age: 23,
+                skills: ["JavaScript", "HTML", "React", "Node.js"],
+            },
+        ];
+        for (let i=0; i < students.length; i++) {
+            console.log(`${students[i].name}`);
+            console.log(`${students[i].skills[3]}`);
+            console.log(`${students[i].age}`);
+        }
+    </script>
+</body>
+</html>

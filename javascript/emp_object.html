@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Object</title>
+</head>
+<body>
+    <h2>Object of Employee</h2>
+    <script>
+        const employee = {
+            id: 101,
+            name: "Salonee Shrestha",
+            designation: "Software Engineer",
+            address: {
+                street: "Dui Pokhari",
+                municipality: "Madhyapur Thimi",
+                district: "Bhaktapur",
+            },
+            skills: ["JavaScript", "HTML", "CSS", "PHP"],
+            greet: function() {
+                console.log(`Hello, my name is ${this.name} and I work as a ${this.designation}.`);
+                console.log(`I'm currently living in ${this.address.street}, ${this.address.municipality}, ${this.address.district}.`);
+            }
+        };
+        employee.greet();
+        console.log("I love " + employee.skills[3]); 
+    </script>
+</body>
+</html>
